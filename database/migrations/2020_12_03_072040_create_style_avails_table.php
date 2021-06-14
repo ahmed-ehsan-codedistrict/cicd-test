@@ -1,0 +1,163 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateStyleAvailsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        if (!Schema::hasTable('StyleAvail')) {
+            Schema::create('StyleAvail', function (Blueprint $table) {            
+                $table->integer('CompanyNo');
+                $table->string('Style');
+                $table->string('Color');
+                $table->string('Company')->nullable();
+                $table->string('Size');
+                $table->decimal('FirstQuality',9,2)->nullable();
+                $table->decimal('OpenOrders',9,2)->nullable();
+                $table->decimal('WIP',9,2)->nullable();
+                $table->decimal('Available',9,0);
+                $table->integer('ExtraFirst');
+                $table->integer('ExtraWIP');
+                $table->integer('OpenToSell');
+                $table->decimal('Damaged',9,0);
+                $table->integer('ResTotal');
+                $table->integer('ResCust');
+                $table->integer('ResEcom');
+                $table->integer('ResSales');
+                $table->tinyInteger('SetStyle');
+                $table->tinyInteger('ComponentStyle');
+                $table->string('ParentStyle')->nullable();
+                $table->string('ParentColor')->nullable();
+                $table->string('SetComponent')->nullable();
+                $table->decimal('AV015V',7,0);
+                $table->decimal('AV025V',7,0);
+                $table->decimal('AV035V',7,0);
+                $table->decimal('AV045V',7,0);
+                $table->decimal('AV055V',7,0);
+                $table->decimal('AV065V',7,0);
+                $table->decimal('AV075V',7,0);
+                $table->decimal('AV085V',7,0);
+                $table->decimal('AV095V',7,0);
+                $table->decimal('AV0105V',7,0);
+                $table->decimal('AV0115V',7,0);
+                $table->decimal('AV0125V',7,0);
+                $table->decimal('ATS01',7,0);
+                $table->decimal('ATS02',7,0);
+                $table->decimal('ATS03',7,0);
+                $table->decimal('ATS04',7,0);
+                $table->decimal('ATS05',7,0);
+                $table->decimal('ATS06',7,0);
+                $table->decimal('ATS07',7,0);
+                $table->decimal('ATS08',7,0);
+                $table->decimal('ATS09',7,0);
+                $table->decimal('ATS10',7,0);
+                $table->decimal('ATS11',7,0);
+                $table->decimal('ATS12',7,0);
+                $table->decimal('e101',10,0)->nullable();
+                $table->decimal('e102',10,0)->nullable();
+                $table->decimal('e103',10,0)->nullable();
+                $table->decimal('e104',10,0)->nullable();
+                $table->decimal('e105',10,0)->nullable();
+                $table->decimal('e106',10,0)->nullable();
+                $table->decimal('e107',10,0)->nullable();
+                $table->decimal('e108',10,0)->nullable();
+                $table->decimal('e109',10,0)->nullable();
+                $table->decimal('e110',10,0)->nullable();
+                $table->decimal('e111',10,0)->nullable();
+                $table->decimal('e112',10,0)->nullable();
+                $table->decimal('ewp01',12,0)->nullable();
+                $table->decimal('ewp02',12,0)->nullable();
+                $table->decimal('ewp03',12,0)->nullable();
+                $table->decimal('ewp04',12,0)->nullable();
+                $table->decimal('ewp05',12,0)->nullable();
+                $table->decimal('ewp06',12,0)->nullable();
+                $table->decimal('ewp07',12,0)->nullable();
+                $table->decimal('ewp08',12,0)->nullable();
+                $table->decimal('ewp09',12,0)->nullable();
+                $table->decimal('ewp10',12,0)->nullable();
+                $table->decimal('ewp11',12,0)->nullable();
+                $table->decimal('ewp12',12,0)->nullable();
+                $table->decimal('UA015V',7,0);
+                $table->decimal('UA025V',7,0);
+                $table->decimal('UA035V',7,0);
+                $table->decimal('UA045V',7,0);
+                $table->decimal('UA055V',7,0);
+                $table->decimal('UA065V',7,0);
+                $table->decimal('UA075V',7,0);
+                $table->decimal('UA085V',7,0);
+                $table->decimal('UA095V',7,0);
+                $table->decimal('UA105V',7,0);
+                $table->decimal('UA115V',7,0);
+                $table->decimal('UA125V',7,0);
+                $table->decimal('RT01',7,0);
+                $table->decimal('RT02',7,0);
+                $table->decimal('RT03',7,0);
+                $table->decimal('RT04',7,0);
+                $table->decimal('RT05',7,0);
+                $table->decimal('RT06',7,0);
+                $table->decimal('RT07',7,0);
+                $table->decimal('RT08',7,0);
+                $table->decimal('RT09',7,0);
+                $table->decimal('RT10',7,0);
+                $table->decimal('RT11',7,0);
+                $table->decimal('RT12',7,0);
+                $table->decimal('RC01',7,0);
+                $table->decimal('RC02',7,0);
+                $table->decimal('RC03',7,0);
+                $table->decimal('RC04',7,0);
+                $table->decimal('RC05',7,0);
+                $table->decimal('RC06',7,0);
+                $table->decimal('RC07',7,0);
+                $table->decimal('RC08',7,0);
+                $table->decimal('RC09',7,0);
+                $table->decimal('RC10',7,0);
+                $table->decimal('RC11',7,0);
+                $table->decimal('RC12',7,0);
+                $table->decimal('RE01',7,0);
+                $table->decimal('RE02',7,0);
+                $table->decimal('RE03',7,0);
+                $table->decimal('RE04',7,0);
+                $table->decimal('RE05',7,0);
+                $table->decimal('RE06',7,0);
+                $table->decimal('RE07',7,0);
+                $table->decimal('RE08',7,0);
+                $table->decimal('RE09',7,0);
+                $table->decimal('RE10',7,0);
+                $table->decimal('RE11',7,0);
+                $table->decimal('RE12',7,0);
+                $table->decimal('RS01',7,0);
+                $table->decimal('RS02',7,0);
+                $table->decimal('RS03',7,0);
+                $table->decimal('RS04',7,0);
+                $table->decimal('RS05',7,0);
+                $table->decimal('RS06',7,0);
+                $table->decimal('RS07',7,0);
+                $table->decimal('RS08',7,0);
+                $table->decimal('RS09',7,0);
+                $table->decimal('RS10',7,0);
+                $table->decimal('RS11',7,0);
+                $table->decimal('RS12',7,0);
+                $table->primary(['CompanyNo','Style','Color'],'Company_Style_Color');
+                //$table->timestamps();
+            });
+        }
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('StyleAvail');
+    }
+}
