@@ -23,7 +23,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        password: ${{ secrets.PASSWORD }}
         username: ${{ secrets.SSH_USERNAME }}
         script: |
           cd /var/www/swatfame_server/
